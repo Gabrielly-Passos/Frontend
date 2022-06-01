@@ -5,7 +5,7 @@
   <img [src]="foto" class="card-img-top" alt=".." />
   <div class="card-body">
     <h5 class="card-title">
-      {{ nomeProduto }}
+      {{ nomeProduto}}
       <span *ngIf="promocao; else elseBlock"  class="badge badge-success">Promoção</span>
       <ng-template #elseBlock>
         <span class="badge badge-success">Aproveite</span>
