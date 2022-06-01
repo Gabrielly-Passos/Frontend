@@ -1,3 +1,4 @@
+import { HomeComponent } from './template/home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -20,6 +21,7 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     HeaderComponent,
+    HomeComponent,
     FooterComponent,
     ListarprodutosComponent,
     CadastrarprodutoComponent
@@ -29,7 +31,8 @@ registerLocaleData(localePt);
     AppRoutingModule,
     FormsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' },  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
