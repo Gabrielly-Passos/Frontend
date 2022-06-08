@@ -22,7 +22,7 @@ listaProdutos: any[]=[
   {nome: 'Curso JavaScript', precoProduto: 450.99, validade: '2023-02-03', id:3},
   {nome: 'Curso TypeScript', precoProduto: 670.01, validade: '2024-01-01', id:4, promocao: true},
   {nome: 'Curso Go', precoProduto: 150.60, validade: '2022-12-25', id:5}
-  
+
 ];
 
 
