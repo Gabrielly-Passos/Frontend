@@ -1,4 +1,7 @@
+import { ProdutosService } from 'src/app/services/produtos.service';
 import { Component, OnInit } from '@angular/core';
+import { Iproduto } from 'src/app/services/Model/IProduto.model';
+
 
 @Component({
   selector: 'app-listarprodutos',
@@ -7,37 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarprodutosComponent implements OnInit {
 
-  listarStrings : string[] = ['Primeiro','Segundo','Terceiro'];
-  listaNumeros : number[] = [15, 15.18, 100];
+  listarProdutos: Iproduto[] = []
 
-  objetoModelo = {
-    nome: 'Fatima',
-    idade: 18,
-    altura: 1.56,
-    graduado: true
-  };
 
-  listaProdutos: any[] =
-  [
-   {nome: 'Curso de Angular', precoProduto: 35.56, validade: '2021-12-31', id: 1},
-   {nome: 'Curso de Ionic', precoProduto: 50, validade: '2021-12-31', id: 2, promocao: true},
-   {id: 3,nome: 'Curso de Ionic Avançado', precoProduto:50, validade: '2021-12-31'}
-  ];
+  constructor(private produtoService: ProdutosService) {
 
-  constructor() {
-    for (let item of this.listarStrings){
-      console.log(item);
-    }
-
-    for (const item of this.listaNumeros){
-      console.log(item);
-    }
-
-    console.log(this.objetoModelo);
-    console.log(this.objetoModelo.nome);
    }
 
   ngOnInit(): void {
   }
+  carregarProdutos(): void{
 
+  }
 }
