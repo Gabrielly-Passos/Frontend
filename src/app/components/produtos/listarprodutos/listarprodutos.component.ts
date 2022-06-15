@@ -1,6 +1,6 @@
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { Component, OnInit } from '@angular/core';
-import { Iproduto } from 'src/app/services/Model/IProduto.model';
+import { IProduto } from 'src/app/services/Model/IProduto.model';
 
 
 @Component({
@@ -10,7 +10,8 @@ import { Iproduto } from 'src/app/services/Model/IProduto.model';
 })
 export class ListarprodutosComponent implements OnInit {
 
-  listarProdutos: Iproduto[] = []
+  listarProdutos: IProduto[] = [];
+
 
 
   constructor(private produtoService: ProdutosService) {
@@ -18,8 +19,12 @@ export class ListarprodutosComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.carregarProdutos();
   }
   carregarProdutos(): void{
+    this.produtoService.buscarTodos().subscribe(retorno =>{
+      this.listarProdutos = retorno;
+    })
 
   }
 }
